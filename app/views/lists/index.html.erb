@@ -1,11 +1,13 @@
-<h1>All lists</h1>
-<ul>
+<%= render "navbar" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hyades.jpg/1920px-Hyades.jpg);">
+  <div class="container">
+    <h1>Welcome to Listicon! &#128253;</h1>
+  </div>
+</div>
+<div class="cards">
   <% @lists.each do |list| %>
-    <li>
-      <%= link_to list.title, list_path(list) %>
-      <p><%= list.content %></p>
-      <%= link_to '(delete)', list_path(list), method: :delete %>
-    </li>
+    <div class="card-category col" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= link_to list.name, list_path(list) %>
+    </div>
   <% end %>
-</ul>
-<%= link_to 'Add list' , new_list_path  %>
+</div>

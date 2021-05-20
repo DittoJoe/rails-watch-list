@@ -1,7 +1,6 @@
-<%= simple_form_for(@bookmark) do |f| %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
-  <%= f.input :movie_id %>
-  <%= f.input :bookmark_id %>
+  <%= f.association :movie %>
   <%= f.submit %>
 <% end %>
-<%= link_to 'Go back' , bookmarks_path  %>
+

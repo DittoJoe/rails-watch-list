@@ -10,7 +10,6 @@ class BookmarksController < ApplicationController
   def new
     @bookmark = Bookmark.new
     @list = List.find(params[:list_id])
-    @bookmark.list = @list
   end
 
   def create
@@ -18,7 +17,7 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
     @bookmark.list = @list
     if @bookmark.save
-      redirect_to list_path(@list)
+      redirect_to list_path(@bookmark.list)
     else
       render :new
     end
