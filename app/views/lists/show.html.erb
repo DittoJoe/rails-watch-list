@@ -13,12 +13,12 @@
             <h2><%= bm.movie.title %></h2>
             <p><%= bm.comment %></p>
           </div>
-          <h2 class="card-trip-pricing"><%= link_to 'Delete 🗑️', bookmark_path(bm), method: :delete, class: "my-3 text-decoration-none" %></h2>
+          <h2 class="card-trip-pricing"><%= link_to 'Delete 🗑️', bookmark_path(bm), method: :delete, class: "text-decoration-none" %></h2>
         </div>
       </div>
     <% end %>
   <ul class="list-unstyled m-2">
-    <li><%= link_to 'Edit list' , edit_list_path(@list), class: "btn btn-primary m-3" %></li>
+    <li><%= link_to 'Edit this list' , edit_list_path(@list), class: "btn btn-primary m-3" %></li>
     <li><%= link_to 'Add movie' , new_list_bookmark_path(@list), class: "btn btn-success m-3" %></li>
     <li><%= link_to 'Delete this list' , list_path(@list), class: "btn btn-danger m-3", method: 'delete' %></li>
   </ul>
