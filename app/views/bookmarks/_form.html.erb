@@ -1,6 +1,11 @@
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit %>
-<% end %>
-
+<%= render "navbar" %>
+<div class="container col-6 col-offset-5 mt-5">
+  <div>
+    <h2 class="text-center m-3">Add movie</h2>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie %>
+      <%= f.submit 'Add to list', class: "btn btn-primary w-100" %>
+    <% end %>
+  </div>
+</div>
