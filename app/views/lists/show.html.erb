@@ -7,7 +7,7 @@
   <div class="cards">
     <% bookmarks.each do |bm| %>
       <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <img src=<%= bm.movie.poster_url %> />
         <div class="card-trip-infos">
           <div>
             <h2><%= bm.movie.title %></h2>
