@@ -3,6 +3,7 @@
     <h2 class="text-center m-3">New list</h2>
     <%= simple_form_for(@list) do |f| %>
       <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit class: "btn btn-primary w-100" %>
     <% end %>
   </div>
