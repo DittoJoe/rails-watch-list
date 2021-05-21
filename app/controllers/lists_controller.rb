@@ -24,6 +24,7 @@ class ListsController < ApplicationController
 
   def update
     @list.update(list_params)
+    redirect_to list_path(@list)
   end
 
   def destroy
