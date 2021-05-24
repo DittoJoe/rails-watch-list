@@ -1,6 +1,10 @@
 <%= render "navbar" %>
 <div class="container">
+<% if @list.photo.attached? %>
 <div class="card-category m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key %>')">
+<% else %>
+<div class="card-category m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/200/300')">
+<% end %>
     <%= @list.name %>
   </div>
   <% bookmarks = @list.bookmarks %>
